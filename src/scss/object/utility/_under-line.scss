@@ -1,0 +1,6 @@
+@use "../../foundation/foundation" as *;
+
+.u-underLine{
+    background: linear-gradient(transparent 70%, $cOrange 70%);
+    line-height: 30px;
+}

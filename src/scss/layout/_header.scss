@@ -1,0 +1,49 @@
+@use "../foundation/foundation" as *;
+
+.l-header {
+    height: 80px;
+    &__inner {
+        max-width: 1280px;
+        height: 100%;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        margin-left: 5px;
+        margin-right: 28px;
+    }
+    &__gnav{
+        justify-content: left;
+        :last-of-type{
+            margin-right: 0;
+        }
+        &__item{
+            margin-right: 28px;
+            color: $cBlack;
+            font-weight: bold;
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__info {
+        text-align: right;
+        &__time{
+            font-size: 12px;
+            font-weight: 500;
+            color: $cBlack;
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+    }
+
+}

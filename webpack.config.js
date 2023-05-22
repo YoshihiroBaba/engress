@@ -7,11 +7,10 @@ const RemoveEmptyScriptsPlugin = require("webpack-remove-empty-scripts");
 module.exports = {
   mode: "development", //デフォルト
   // devtool: 'source-map',
-  mode: "development",
-  entry: "./src/js/index.js",
+  entry: "./src/js/main.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "js/bundle.js",
+    filename: "js/[name].js",
     publicPath: "/",
   },
   module: {
@@ -37,8 +36,7 @@ module.exports = {
           {
             loader: "css-loader",
             options: {
-              sourceMap: false,
-              url: true,
+              sourceMap: false, //デバックする時にtrueにするとよい。
             },
           },
           {
@@ -47,35 +45,43 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|svg|gif)$/,
+        test: /\.(png|jpg|jpeg|svg|gif)/,
         type: "asset/resource",
         generator: {
-          filename: "images/[name]-[contenthash][ext]",
+          filename: "images/[name][ext]", //[contentshash]でランダムに設定し、キャッシュをリセットする
         },
         use: [
+          // webpack4までの記述
+          // {
+          //   loader: 'file-loader',
+          //   options: {
+          //     esModule: false,
+          //     name: 'images/',
+          //   },
+          // },
           {
             loader: "image-webpack-loader",
             options: {
-              // limit: 8192
+              //どのくらい圧縮するかを指定できる
             },
           },
         ],
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: "html-loader", //<%= require() %>を使わなくてもよいように
       },
     ],
   },
   plugins: [
     // new RemoveEmptyScriptsPlugin(),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: "./css/style.css",
+      filename: "./css/[name].css",
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/front-page.html",
-      filename:"front-page.html",
+      // filename: "front-page.html",
     }),
-    new CleanWebpackPlugin(),
   ],
 };
