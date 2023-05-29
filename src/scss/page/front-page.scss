@@ -1,0 +1,384 @@
+@use "../foundation/foundation" as *;
+@use "../object/object" as *;
+
+// mv
+.p-fv{
+    background-image: url(../images/fv.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 476px;
+    padding-top: 116px;
+    text-align: center;
+    &__main-copy{
+        color: $cWhite;
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 28px;
+    }
+    &__sub-copy{
+        color: $cWhite;
+        font-size: 18px;
+        text-align: center;
+        line-height: 31px;
+        font-weight: 500;
+        margin-bottom: 51px;
+    }
+    &__contact{
+        display: block;
+        color: $cWhite;
+        text-decoration: underline;
+        margin-top: 22px;
+        font-weight: 500;
+    }
+    &-content{
+        min-height: 604px;
+        background-color: $cAppearance;
+        padding-top: 63px;
+        padding-bottom: 54px;
+        &__ttl{
+            color: $cWhite;
+            text-align: center;
+            font-weight: bold;
+            font-size: 36px;
+            margin-bottom: 65px;
+        }
+        &__txt{
+            color: $cWhite;
+            display: flex;
+            justify-content: center;
+            line-height: 39px;
+            >p {
+                margin-right: 30px;
+                text-align: center;
+                font-size: 18px;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &:nth-child(1){
+                    margin-right: 57px;
+                }
+            }
+        }
+        &__inner{
+            max-width: 920px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0 auto;
+        }
+        &__box {
+            background-color: $cWhite;
+            height: 248px;
+            padding: 11px 16px 12px;
+            color: $cAppearance;
+            text-align: center;
+            margin-top: 62px;
+            &__border{
+                border: 5px solid $cAppearance;
+                height: 100%;
+                padding-top: 16px;
+                padding-bottom: 19px;
+            }
+            &__ttl{
+                font-size: 36px;
+                font-weight: bold;
+                line-height: 50px;
+            }
+            &__txt{
+                margin-top: 25px;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 31px;
+            }
+        }
+    }
+}
+
+// 3つの強み
+.p-features{
+    padding-top: 59px;
+    &__ttl {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 59px;
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+    &__media{
+        display: flex;
+        // flex-direction: row-reverse;
+        margin-bottom: 60px;
+        &:last-of-type{
+            margin-bottom: 93px;
+        }
+        &__thumb{
+            max-width: 350px;
+            width: 100%;
+        }
+        &__body{
+            max-width: 500px;
+            margin-right: 50px;
+        }
+        &__label{
+            background-color: $cOrange;
+            width: 90px;
+            height: 30px;
+            color: $cWhite;
+            text-align: center;
+            display: block;
+            font-size: 12px;
+            padding-top: 8px;
+            font-weight: 500;
+        }
+        &__ttl {
+            font-size: 26px;
+            font-weight: bold;
+            color: $cAppearance;
+            margin-top: 24px;
+            line-height: 39px;
+        }
+        &__txt{
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 27px;
+            margin-top: 30px;
+        }
+    }
+    &__to-price{
+        background-image: url(../images/price.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 217px;
+        text-align: center;
+        padding-top: 61px;
+        margin-bottom: 39px;
+        border: 1px solid $cGray;
+        &__copy{
+            color: $cWhite;
+            font-size: 26px;
+            font-weight: bold;
+            margin-bottom: 27px;
+        }
+    }
+}
+
+// 成功事例
+.p-success-case{
+    background-color: $cAppearance;
+    min-height: 608px;
+    padding-top: 58px;
+    padding-bottom: 60px;
+    &__ttl{
+        color: $cWhite;
+        text-align: center;
+        font-weight: bold;
+        font-size: 36px;
+        margin-bottom: 137px;
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+    &__wrapper{
+        display: flex;
+        :last-of-type{
+            margin-right: 0;
+        }
+    }
+    &__card{
+        width: 31.1%;
+        margin-right: 3.333%;
+        p {
+            color: $cAppearance;
+            background-color: $cWhite;
+            font-weight: 500;
+            height: 2em;
+            padding-top: 8px;
+            padding-left: 14px;
+        }
+        &__ttl{
+            color: $cWhite;
+            line-height: 29px;
+            margin-bottom: 9px;
+        }
+        &__img{
+            background-color: $cWhite;
+            height: 171px;
+            position: relative;
+            margin-bottom: 16px;
+        }
+        &__model{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        &__body{
+            width: 100%;
+            display: flex;
+        }
+        &__status{
+            // display: inline-block;
+            width: 35.7%;
+            margin-right: 2.8%;
+            padding-left: 10px;
+        }
+        &__name{
+            // display: inline-block;
+            width: 61.4%;
+            margin-right: 0;
+        }
+        &__txt{
+            display: block;
+            margin-top: 10px;
+        }
+    }
+}
+
+// ご利用の流れ
+
+.p-flow{
+    padding-top: 58px;
+    padding-bottom: 75px;
+    &__ttl{
+        color: $cAppearance;
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 53px;
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+    &__box{
+        display: flex;
+        width: 100%;
+        height: 64px;
+        background-color: $cBgGray;
+        position: relative;
+        margin-bottom: 8px;
+        :last-of-type{
+            margin-bottom: 0;
+        }
+        &__number{
+            width: 64px;
+            background-color: $cOrange;
+            color: $cWhite;
+            padding-top: 24px;
+            text-align: center;
+        }
+        &__ttl{
+            width: 23.8%;
+            margin-left: 2.33%;
+            margin-top: 25px;
+            color: $cAppearance;
+        }
+        &__boader{
+            height: 29.3px;
+            width: 1px;
+            background-color: $cBdGray;
+            position: absolute;
+            left: 31.1%;
+            top: 26.3%;
+        }
+        &__txt{
+            width: 68.9%;
+            margin-top: 25px;
+            margin-left: 5.94%;
+            color: $cAppearance;
+        }
+    }
+}
+
+// よくある質問
+
+.p-faq{
+    padding-bottom: 90.24px;
+    &__ttl{
+        color: $cAppearance;
+        font-size: 36px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 32.5px;
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+    &__content{
+        border-top: 1px solid $cAppearance;
+        padding-bottom: 8.5px;
+        &:last-child{
+            border-bottom: 1px solid $cAppearance;
+        }
+        &__ttl{
+            font-weight: 500;
+            height: 64.5px;
+            color: $cAppearance;
+        }
+        &__btn{
+            padding-top: 6.75px;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+        &__body{
+            height: 65px;
+            padding-top: 23px;
+            padding-left: 26px;
+            background-color: $cBgGray;
+            &:not(.--open){
+            display: none;
+            }
+        }
+        &__txt{
+            font-weight: 500;
+        }
+    }
+}
+
+// ブログ&お知らせ
+
+.p-blog-info{
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+        display: flex;
+    }
+    &__blog{
+        width: 47.78%;
+        margin-right: 7.4%;
+        &__ttl{
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+    &__info{
+        width: 47.78%;
+        &__ttl{
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+    }
+
+}

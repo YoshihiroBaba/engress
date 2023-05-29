@@ -1,0 +1,26 @@
+@use "../../foundation/foundation" as *;
+
+.c-open{
+    &:after{
+        display: none;
+    }
+}
+
+.c-close{
+    height: 3px;
+    width: 25px;
+    background-color: $cAppearance;
+    display: inline-block;
+    position: absolute;
+    right: 20.5px;
+    top: 34.5px;
+    &:after {
+        content: "";
+        height: 3px;
+        width: 25px;
+        background-color: $cAppearance;
+        position: absolute;
+        // top: 12.5px;
+        transform: rotate(90deg);
+    }
+}

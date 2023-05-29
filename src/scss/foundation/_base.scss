@@ -1,4 +1,27 @@
+@use "./color" as *;
+
 body{
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
+a, h2, h3,h4, p, time {
+    font-size: 16px;
+    font-family: "游ゴシック体";
+    font-weight: bold;
+    margin: 0;
+    color: $cAppearance;
+}
+label, button,input,select {
+    font-size: 16px;
+    font-family: "游ゴシック体";
+    font-weight: 500;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
