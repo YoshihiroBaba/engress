@@ -1,7 +1,15 @@
+@use "../../foundation/foundation" as *;
+
 .u--reverse{
-    flex-direction: row-reverse;
+    // flex-direction: column;
+    @include responsive--min(sm){
+        flex-direction: row-reverse;
+    }
 }
 .u--mg-right {
     margin-right: 0 !important;
     margin-left: 50px;
+    @include responsive(ms){
+        margin-left: 0;
+    }
 }

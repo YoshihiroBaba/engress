@@ -1,0 +1,120 @@
+@use "../foundation/foundation" as *;
+
+.l-footer{
+    min-height: 266px;
+    background-color: $cAppearance;
+    z-index: 10;
+    position: relative;
+    padding-top: 35px;
+    &__inner{
+        margin: 0 auto;
+        max-width: 936px;
+        padding-left: 19px;
+        justify-content: space-between;
+        display: flex;
+        @include responsive(md){
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        @include responsive(ms){
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__gnav{
+        display: flex;
+        color: $cBgGray;
+        margin-top: 10.5px;
+        height: 23px;
+        // align-items: center;
+        @include responsive(ms){
+            justify-content: center;
+            font-size: .9em;
+        }
+        &__item{
+            padding-right: 21.5px;
+            padding-left: 21.5px;
+            border-right: 1px solid $cWhite;
+            height: 100%;
+            padding-top: 3px;
+            @include responsive(sm){
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+    }
+    &__info{
+        width: 197px;
+        text-align: right;
+        @include responsive(ms){
+            display: flex;
+            width: auto;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35px;
+        }
+        &__body{
+            @include responsive(ms){
+                margin-left: 30px;
+            }
+        }
+        &__time{
+            font-size: 12px;
+            color: $cWhite;
+            font-weight: 500;
+            margin-top: 13px;
+        }
+        &__logo{
+            background-color: $cWhite;
+            width: 197px;
+            height: 58px;
+            padding: 14px 19px 13px 19px;
+            margin-bottom: 27px;
+            border: 1px solid $cGray;
+            @include responsive(ms){
+                margin-bottom: 0;
+            }
+            @include responsive(sm){
+                width: 169px;
+                height: auto;
+                padding: 5px;
+            }
+            img {
+                width: 159px;
+                height: 31px;
+                @include responsive(sm){
+                    object-fit: cover;
+                }
+            }
+    }
+
+    }
+    &__copyright{
+        background-color: $cBgGray;
+        z-index: 11;
+        height: 36px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding-top: 12px;
+        // display: flex;
+        &__txt{
+            color:$cAppearance;
+            // display: inline-block;
+            font-size: 12px;
+            margin-left: 78.36%;
+            @include responsive(sm){
+                margin-left: 65%;
+                // text-align: center;
+            }
+
+        }
+    }
+}

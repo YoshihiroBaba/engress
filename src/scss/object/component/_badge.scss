@@ -1,0 +1,15 @@
+@use "../../foundation/foundation" as *;
+
+.c-media__badge{
+    background-color: $cAppearance;
+    border: 1px solid $cGray;
+    height:23px;
+    width: 78px;
+    color: $cWhite;
+    text-align: center;
+    position: absolute;
+    &-txt{
+        font-weight: 500;
+        font-size: 12px;
+    }
+}

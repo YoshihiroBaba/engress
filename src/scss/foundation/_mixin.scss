@@ -1,0 +1,55 @@
+// アニメーション
+@mixin animation(
+  $name,
+  $duration: 1s,
+  $timing-function: ease,
+  $delay: 3s,
+  $iteration-count: infinite,
+  $direction: normal,
+  $fill-mode: forwards
+) {
+    animation: { //animation- を省略できる
+      name: $name;
+      duration: $duration;
+      timing-function: $timing-function;
+      duration: $duration;
+      delay: $delay;
+      iteration-count: $iteration-count;
+      direction: $direction;
+      fill-mode: $fill-mode;
+  }
+}
+
+
+// レスポンシブ
+@mixin responsive($size){
+    $with:0;
+    @if($size == lg){
+        $with:1700px;
+    } @else if($size == md){
+        $with:1080px;
+    } @else if($size == ms){
+        $with:768px;
+    } @else if($size == sm){
+        $with:550px;
+    }
+    @media screen and (max-width:$with) {
+        @content;
+    }
+  }
+
+  @mixin responsive--min($size){
+    $with:0;
+    @if($size == lg){
+        $with:2500px;
+    } @else if($size == ml){
+        $with:1700px;
+    } @else if($size == ms){
+        $with:1080px;
+    } @else if($size == sm){
+        $with:768px;
+    }
+    @media screen and (min-width:$with) {
+        @content;
+    }
+  }

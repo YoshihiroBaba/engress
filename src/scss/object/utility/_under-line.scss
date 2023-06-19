@@ -3,4 +3,10 @@
 .u-underLine{
     background: linear-gradient(transparent 70%, $cOrange 70%);
     line-height: 30px;
+    width: fit-content;
+    @include responsive(sm) {
+        font-size: 23px;
+        display: block;
+        line-height: 24px;
+    }
 }

@@ -1,7 +1,8 @@
 @use "./color" as *;
 
 body{
-        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+        font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+        font-weight:500;
 }
 
 a, h2, h3,h4, p, time {

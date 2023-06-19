@@ -14,6 +14,15 @@
             font-size: 14px;
             padding-top: 18px;
             margin-left: 23px;
+            @include responsive(md){
+                width: 50%;
+                margin-left: 0;
+                margin-bottom: 20px;
+                margin-top: 40px;
+                height: 40px;
+                padding-top: 1.1em;
+                font-size: .8em;
+            }
         }
         &--fv{
             border-radius: 31px;
@@ -21,10 +30,29 @@
             height: 60px;
             font-size: 16px;
             padding: 22px;
+            @include responsive(sm){
+                width: 40vw;
+                height: 2.78em;
+                font-size: .9em;
+                padding: .9em;
+            }
+        }
+        &--cta{
+            border-radius: 25px;
+            width: 280px;
+            height: 50px;
+            font-size: 16px;
+            padding: 16px;
+            @include responsive(sm){
+                width: 40vw;
+                height: 2.78em;
+                font-size: .9em;
+                padding: .9em;
+            }
         }
     }
     &__contact{
-        display: block;
+        display: inline-block;
         background-color: $cAppearance;
         width: 137px;
         height: 50px;
@@ -35,6 +63,14 @@
         padding-top: 18px;
         font-size: 14px;
         font-weight: bold;
+        @include responsive(md){
+            width: 50%;
+            margin: 0;
+            text-align: center;
+            height: 40px;
+            padding-top: 1.1em;
+            font-size: .8em;
+        }
     }
     &__to-price{
         color: $cWhite;
@@ -44,5 +80,11 @@
         height: 50px;
         display: inline-block;
         padding-top: 16px;
+        @include responsive(sm){
+            height: 3em;
+            width: 35vw;
+            padding-top: .9em;
+            font-size: .8em;
+        }
     }
 }

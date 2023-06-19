@@ -11,11 +11,23 @@
     height: 476px;
     padding-top: 116px;
     text-align: center;
+    margin-top: 80px;
+    @include responsive(ms){
+        background-position-x: -460px;
+        margin-top: 60px;
+    }
+    @include responsive(sm){
+        padding-top: 60px;
+        height: 400px;
+    }
     &__main-copy{
         color: $cWhite;
         font-size: 48px;
         text-align: center;
         margin-bottom: 28px;
+        @include responsive(ms){
+            font-size: 2.25em;
+        }
     }
     &__sub-copy{
         color: $cWhite;
@@ -24,6 +36,9 @@
         line-height: 31px;
         font-weight: 500;
         margin-bottom: 51px;
+        @include responsive(ms){
+            font-size: .9em;
+        }
     }
     &__contact{
         display: block;
@@ -43,13 +58,29 @@
             font-weight: bold;
             font-size: 36px;
             margin-bottom: 65px;
+            @include responsive--min(ms){
+                br{
+                    display: none;
+                }
+            }
+            @include responsive(ms){
+                font-size: 1.75em;
+                margin-bottom: 30px;
+            }
         }
         &__txt{
-            color: $cWhite;
             display: flex;
             justify-content: center;
             line-height: 39px;
+            @include responsive(ms){
+                flex-direction: column;
+                font-size: .9em;
+                br{
+                    display: none;
+                }
+            }
             >p {
+                color: $cWhite;
                 margin-right: 30px;
                 text-align: center;
                 font-size: 18px;
@@ -59,7 +90,11 @@
                 &:nth-child(1){
                     margin-right: 57px;
                 }
+                @include responsive(ms){
+                    font-size: 1em;
+                }
             }
+
         }
         &__inner{
             max-width: 920px;
@@ -74,22 +109,50 @@
             color: $cAppearance;
             text-align: center;
             margin-top: 62px;
+            @include responsive(ms){
+                margin-top: 30px;
+            }
+            @include responsive(sm){
+                min-height: 258px;
+            }
             &__border{
                 border: 5px solid $cAppearance;
                 height: 100%;
                 padding-top: 16px;
                 padding-bottom: 19px;
+                padding-left: 10px;
+                padding-right: 10px;
             }
             &__ttl{
                 font-size: 36px;
                 font-weight: bold;
                 line-height: 50px;
+                @include responsive(ms){
+                    font-size: 1.8em;
+                }
+                @include responsive(sm){
+                    font-size: 1.5em;
+                    span {
+                           margin: 0 auto;
+                    }
+                }
             }
             &__txt{
                 margin-top: 25px;
                 font-size: 18px;
                 font-weight: 500;
                 line-height: 31px;
+                @include responsive(ms){
+                    font-size: 1em;
+                    margin-top: 10px;
+                    line-height: 25px;
+                }
+                @include responsive(sm){
+                    font-size: .9em;
+                    br {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -99,10 +162,16 @@
 .p-features{
     padding-top: 59px;
     &__ttl {
-        font-size: 36px;
+        font-size: 1.75em;
         font-weight: bold;
         text-align: center;
         margin-bottom: 59px;
+        @include responsive--min(sm){
+            font-size: 36px;
+            br {
+                display: none;
+            }
+        }
     }
     &__inner{
         max-width: 920px;
@@ -112,18 +181,56 @@
     }
     &__media{
         display: flex;
-        // flex-direction: row-reverse;
         margin-bottom: 60px;
+        @include responsive(ms){
+            flex-direction: column;
+        }
+        &:nth-child(1){
+            @include responsive(ms){
+                background-image: url(../images/feature01.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        &:nth-child(2){
+            @include responsive(ms){
+                background-image: url(../images/feature02.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        &:nth-child(3){
+            @include responsive(ms){
+                background-image: url(../images/feature03.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
         &:last-of-type{
             margin-bottom: 93px;
         }
         &__thumb{
             max-width: 350px;
             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include responsive(ms){
+                display: none;
+            }
         }
         &__body{
             max-width: 500px;
             margin-right: 50px;
+            @include responsive(ms){
+                // padding-bottom: 20px;
+                margin-right: 0;
+                max-width: 100%;
+                position: relative;
+            }
+
         }
         &__label{
             background-color: $cOrange;
@@ -135,6 +242,10 @@
             font-size: 12px;
             padding-top: 8px;
             font-weight: 500;
+            @include responsive(ms){
+                position: absolute;
+                z-index: 5;
+            }
         }
         &__ttl {
             font-size: 26px;
@@ -142,12 +253,49 @@
             color: $cAppearance;
             margin-top: 24px;
             line-height: 39px;
+            @include responsive(ms){
+                padding-top: 44px;
+                padding-bottom: 20px;
+                margin-top: 0;
+                text-align: center;
+                background-color: $cBgGray;
+                opacity: .8;
+                border: none;
+            }
+            @include responsive--min(ms){
+                :last-child{
+                    br {
+                        display: none;
+                    }
+                }
+            }
+            @include responsive(sm){
+                font-size: 1.375em;
+                line-height: 35px;
+            }
         }
         &__txt{
             font-size: 16px;
             font-weight: 500;
             line-height: 27px;
             margin-top: 30px;
+            color: $cAppearance;
+            @include responsive(ms){
+                // color: $cWhite;
+                text-align: center;
+                padding-left: 10%;
+                padding-right: 10%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-top: 0;
+                background-color: $cBgGray;
+                opacity: .9;
+                border: none;
+            }
+            @include responsive(sm){
+                font-size: .9em;
+                line-height: 24px;
+            }
         }
     }
     &__to-price{
@@ -166,6 +314,9 @@
             font-size: 26px;
             font-weight: bold;
             margin-bottom: 27px;
+            @include responsive(sm){
+                font-size: 1.375em;
+            }
         }
     }
 }
@@ -182,22 +333,50 @@
         font-weight: bold;
         font-size: 36px;
         margin-bottom: 137px;
+        @include responsive(ms){
+            font-size: 1.75em;
+            margin-bottom: 70px;
+        }
     }
     &__inner{
         max-width: 920px;
         padding-left: 10px;
         padding-right: 10px;
         margin: 0 auto;
+        @include responsive(md){
+            max-width: 610px;
+            justify-content: center;
+        }
+        @include responsive(sm){
+            // max-width: 300px;
+        }
     }
     &__wrapper{
         display: flex;
-        :last-of-type{
+        flex-wrap: wrap;
+
+        :nth-child(3n){
             margin-right: 0;
+        }
+        @include responsive(md){
+            :nth-child(2n){
+                margin-right: 0;
+            }
+        }
+        @include responsive(ms){
+            justify-content: center;
         }
     }
     &__card{
-        width: 31.1%;
-        margin-right: 3.333%;
+        width: 280px;
+        margin-right: 30px;
+        @include responsive(md){
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        @include responsive(sm){
+            margin-right: 0;
+        }
         p {
             color: $cAppearance;
             background-color: $cWhite;
@@ -205,11 +384,18 @@
             height: 2em;
             padding-top: 8px;
             padding-left: 14px;
+            @include responsive(sm){
+                font-size: .9em;
+            }
         }
         &__ttl{
             color: $cWhite;
             line-height: 29px;
             margin-bottom: 9px;
+            @include responsive(sm){
+                font-size: .9em;
+                line-height: 25px;
+            }
         }
         &__img{
             background-color: $cWhite;
@@ -256,6 +442,9 @@
         font-size: 36px;
         font-weight: bold;
         margin-bottom: 53px;
+        @include responsive(ms){
+            font-size: 1.75em;
+        }
     }
     &__inner{
         max-width: 920px;
@@ -266,10 +455,13 @@
     &__box{
         display: flex;
         width: 100%;
-        height: 64px;
+        min-height: 64px;
         background-color: $cBgGray;
         position: relative;
         margin-bottom: 8px;
+        @include responsive(ms){
+            height: auto;
+        }
         :last-of-type{
             margin-bottom: 0;
         }
@@ -279,12 +471,25 @@
             color: $cWhite;
             padding-top: 24px;
             text-align: center;
+            @include responsive(sm){
+                width: 32px;
+                font-size: .9em;
+            }
         }
         &__ttl{
             width: 23.8%;
             margin-left: 2.33%;
             margin-top: 25px;
             color: $cAppearance;
+            @include responsive(ms){
+                margin-top: 1.2em;
+                margin-left: 1%;
+                margin-right: 1%;
+                font-size: .9em;
+            }
+            @include responsive(sm){
+
+            }
         }
         &__boader{
             height: 29.3px;
@@ -293,12 +498,23 @@
             position: absolute;
             left: 31.1%;
             top: 26.3%;
+            @include responsive(ms){
+                left: 32%;
+            }
         }
         &__txt{
             width: 68.9%;
             margin-top: 25px;
             margin-left: 5.94%;
             color: $cAppearance;
+            @include responsive(ms){
+                margin-top: 1.2em;
+                margin-left: 3%;
+                margin-right: 2%;
+                font-size: .9em;
+            }
+            @include responsive(sm){
+            }
         }
     }
 }
@@ -313,6 +529,9 @@
         text-align: center;
         font-weight: bold;
         margin-bottom: 32.5px;
+        @include responsive(ms){
+            font-size: 1.75em;
+        }
     }
     &__inner{
         max-width: 920px;
@@ -330,6 +549,9 @@
             font-weight: 500;
             height: 64.5px;
             color: $cAppearance;
+            @include responsive(ms){
+                height: 60px;
+            }
         }
         &__btn{
             padding-top: 6.75px;
@@ -337,6 +559,10 @@
             width: 100%;
             position: relative;
             cursor: pointer;
+            @include responsive(ms){
+                padding-right: 60px;
+                font-size: .9em;
+            }
         }
         &__body{
             height: 65px;
@@ -346,9 +572,17 @@
             &:not(.--open){
             display: none;
             }
+            @include responsive(sm){
+                padding-top: 1em;
+                height: 60px;
+                padding-right: 1%;
+            }
         }
         &__txt{
             font-weight: 500;
+            @include responsive(ms){
+                font-size: .9em;
+            }
         }
     }
 }
@@ -356,29 +590,111 @@
 // ブログ&お知らせ
 
 .p-blog-info{
+    color: $cAppearance;
     &__inner{
         max-width: 920px;
         padding-left: 10px;
         padding-right: 10px;
         margin: 0 auto;
         display: flex;
+        @include responsive(ms){
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     &__blog{
         width: 47.78%;
         margin-right: 7.4%;
+        @include responsive(ms){
+            width: 80%;
+            margin: 0 auto;
+        }
+        @include responsive(sm){
+            width: 90%;
+        }
         &__ttl{
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 30px;
+            @include responsive(ms){
+                font-size: 1.75em;
+                text-align: center;
+            }
+        }
+        &__media{
+            width: 100%;
+            display: flex;
+            position: relative;
+            margin-bottom: 31px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &-body{
+                max-width: 260px;
+                margin-left: 20px;
+                position: relative;
+                color: $cAppearance;
+                text-decoration: underline;
+                font-weight: bold;
+                line-height: 27px;
+                @include responsive(ms){
+                    max-width: 400px;
+                }
+                >time {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    font-size: 12px;
+                    font-weight: 500;
+                    line-height: 1em;
+                }
+            }
+            &-txt{
+                @include responsive(sm){
+                    font-size: .9em;
+                }
+            }
         }
     }
     &__info{
-        width: 47.78%;
+        width: 44.67%;
+        @include responsive(ms){
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 90px;
+        }
+        @include responsive(sm){
+            // width: 100%;
+        }
         &__ttl{
             font-size: 2em;
             font-weight: bold;
             margin-bottom: 30px;
+            @include responsive(ms){
+                font-size: 1.75em;
+                text-align: center;
+            }
         }
+        &__media{
+            width: 100%;
+            height: 87px;
+            margin-bottom: 17px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &-txt {
+                text-decoration: underline;
+                display: block;
+                font-weight: 500;
+                margin-top: 16px;
+            }
+            >time {
+                display: block;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 1em;
+        }
+     }
     }
 
 }

@@ -26,7 +26,26 @@
               <a href="" class="l-header__gnav__item">ブログ</a>
               <a href="" class="l-header__gnav__item">コース・料金</a>
             </nav><!-- /.c-gnav -->
-        </div><!-- /.l-header__left -->
+          </div><!-- /.l-header__left -->
+          <div class="l-header__burger">
+            <nav class="l-header__gnav--burger">
+              <a href="" class="l-header__gnav__item">ホーム</a>
+              <a href="" class="l-header__gnav__item">お知らせ</a>
+              <a href="" class="l-header__gnav__item">ブログ</a>
+              <a href="" class="l-header__gnav__item">コース・料金</a>
+            </nav><!-- /.c-gnav -->
+            <div class="l-header__right--burger">
+              <a href="" type="button" class="c-btn__doc-request c-btn__doc-request--header">資料請求</a>
+              <a href="" type="button" class="c-btn__contact">お問い合わせ</a>
+              <div class="l-header__info">
+                <p class="l-header__info__time">平日08:00〜20:00</p>
+                <div class="c-tel">
+                  <img src="../images/パス 29.png" alt="" class="c-tel__logo" />
+                  <p class="c-tel__number">0123-456-7890</p>
+                </div>
+              </div><!-- /.l-header__info -->
+            </div> <!-- /.l-header__right -->
+          </div> <!-- /.l-header__burger -->
         <div class="l-header__right">
             <div class="l-header__info">
               <p class="l-header__info__time">平日08:00〜20:00</p>
@@ -38,9 +57,15 @@
             <a href="" type="button" class="c-btn__doc-request c-btn__doc-request--header">資料請求</a>
             <a href="" type="button" class="c-btn__contact">お問い合わせ</a>
         </div> <!-- /.l-header__right -->
+        <button class="c-burger-icon" id="c-burger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
       <!-- /.l-header__inner -->
     </header>
+    <main>
     <section class="p-fv">
       <h2 class="p-fv__main-copy">TOEFL対策はEngress</h2>
       <p class="p-fv__sub-copy">日本人へのTOEFL指導歴豊かな講師陣の<br>コーチング型TOEFLスクール</p>
@@ -49,7 +74,7 @@
     </section><!-- /.p-fv -->
     <section class="p-fv-content">
       <div class="p-fv-content__inner">
-        <h3 class="p-fv-content__ttl">TOEFL学習でこんな悩みありませんか？</h3>
+        <h3 class="p-fv-content__ttl">TOEFL学習で<br>こんな悩みありませんか？</h3>
         <div class="p-fv-content__txt">
           <p>勉強の習慣が<br>身についていない</p>
           <p>勉強しているはず<br>なのに点数が伸びない</p>
@@ -64,7 +89,7 @@
       </div><!-- /.p-fv__inner -->
     </section><!-- /.fv-content -->
     <section class="p-features">
-      <h2 class="p-features__ttl">TOEFL対策に特化したEngress3つの強み</h2>
+      <h2 class="p-features__ttl">TOEFL対策に特化した<br>Engress3つの強み</h2>
       <div class="p-features__inner">
         <article class="p-features__media u--reverse">
             <img src="../images/feature01.png" class="p-features__media__thumb" alt="">
@@ -86,7 +111,7 @@
             <img src="../images/feature03.png" class="p-features__media__thumb" alt="">
           <div class="p-features__media__body">
             <p class="p-features__media__label">特長 ３</p>
-            <h3 class="p-features__media__ttl">平均3ヶ月でTOEFL<br>iBT20点アップ</h3>
+            <h3 class="p-features__media__ttl u-dis--none-min-ms">平均3ヶ月でTOEFL <br>iBT20点アップ</h3>
             <p class="p-features__media__txt">Engressは高校生からサラリーマンまで様々な年齢層の方々が通われていますが、完全オーダーメイドのカリキュラムで柔軟に対応しているため、平均3ヶ月でTOEFLスコアを20点アップさせています。</p>
           </div>
         </article>
@@ -184,7 +209,7 @@
         <dl class="p-faq__content">
           <dt class="p-faq__content__ttl"><button class="p-faq__content__btn">講師に日本人はいますか？<span class="c-close"></span></button></dt>
           <dd class="p-faq__content__body">
-            <p class="p-faq__content__txt">Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。</p>
+            <p p class="p-faq__content__txt">Engressは各個人に最適な学習プランをご提供しております。サラリーマンの方でも継続できます。</p>
           </dd>
         </dl>
         <dl class="p-faq__content">
@@ -199,13 +224,82 @@
       <div class="p-blog-info__inner">
         <div class="p-blog-info__blog">
           <h2 class="p-blog-info__blog__ttl">ブログ</h2>
+          <article class="p-blog-info__blog__media">
+            <figure class="p-blog-info__blog__media-thumb"><p class="c-media__badge"><span class="c-media__badge-txt">カテゴリー</span></p><img src="../images/sample01.png" alt="" class="p-blog-info__blog__media__img"></figure>
+            <figcaption class="p-blog-info__blog__media-body">
+                <a href="" class="p-blog-info__blog__media-txt">Engress説明会in大阪の模様をお伝えします</a>
+                <time datetime="2020-12-27">2020-12-27</time>
+              </figcaption>
+          </article><!-- /.p-blog-info__blog__media -->
+          <article class="p-blog-info__blog__media">
+            <figure class="p-blog-info__blog__media-thumb"><p class="c-media__badge"><span class="c-media__badge-txt">カテゴリー</span></p><img src="../images/sample02.png" alt="" class="p-blog-info__blog__media__img"></figure>
+            <figcaption class="p-blog-info__blog__media-body">
+                <a href="" class="p-blog-info__blog__media-txt">Engressもくもく会でみんなでTOEFL学習をしませんか？</a>
+                <time datetime="2020-12-01">2020-12-01</time>
+              </figcaption>
+          </article><!-- /.p-blog-info__blog__media -->
+          <article class="p-blog-info__blog__media">
+            <figure class="p-blog-info__blog__media-thumb"><p class="c-media__badge"><span class="c-media__badge-txt">カテゴリー</span></p><img src="../images/sample03.png" alt="" class="p-blog-info__blog__media__img"></figure>
+            <figcaption class="p-blog-info__blog__media-body">
+                <a href="" class="p-blog-info__blog__media-txt">TOEFL学習にはコーチング学習が最強である話</a>
+                <time datetime="2020-11–20">2020-11–20</time>
+              </figcaption>
+          </article><!-- /.p-blog-info__blog__media -->
         </div><!-- /.p-blog-info__blog -->
         <div class="p-blog-info__info">
           <h2 class="p-blog-info__info__ttl">お知らせ</h2>
-
+          <article class="p-blog-info__info__media">
+            <time datetime="2020-12-01">2020-12-01</time>
+            <a href="" class="p-blog-info__info__media-txt">2021年のスケジュールについて</a>
+          </article>
+          <article class="p-blog-info__info__media">
+            <time datetime="2019-11-02">2019-11-02</time>
+            <a href="" class="p-blog-info__info__media-txt">11月休校日のお知らせ</a>
+          </article>
+          <article class="p-blog-info__info__media">
+            <time datetime="2020-10-01">2020-10-01</time>
+            <a href="" class="p-blog-info__info__media-txt">10月休校日のお知らせ</a>
+          </article>
         </div><!-- /.p-blog-info__info -->
       </div><!-- /.p-blog-info__inner -->
     </section><!-- /.blog-info -->
+    <section class="pr-cta">
+      <div class="pr-cta__banner">
+        <h3 class="pr-cta__ttl">まずは無料で資料請求から</h3>
+        <a href="" type="button" class="c-btn__doc-request c-btn__doc-request--cta">資料請求</a>
+        <a href="" class="pr-cta__contact">お問い合わせ</a>
+      </div>
+      <div class="pr-cta__phone">
+        <p class="pr-cta__phone__txt">お電話でのお問い合わせはこちら</p>
+        <a href="" type="number" class="pr-cta__phone__number">0123-456-7890</a>
+        <p class="pr-cta__phone__time">平日 08:00~20:00</p>
+      </div><!-- /.pr-cta__contact -->
+    </section>
+  </main>
+  <footer class="l-footer">
+    <div class="l-footer__inner">
+      <nav class="l-footer__gnav">
+        <a href="" class="l-footer__gnav__item">ホーム</a>
+        <a href="" class="l-footer__gnav__item">お知らせ</a>
+        <a href="" class="l-footer__gnav__item">ブログ</a>
+        <a href="" class="l-footer__gnav__item">コース・料金</a>
+      </nav><!-- /.l-footer-gnav -->
+      <div class="l-footer__info">
+      <div class="l-footer__info__logo"><img src="../images/logo (2).png" alt=""></div>
+        <div class="l-footer__info__body">
+          <div class="c-tel--footer">
+              <img src="../images/パス 16.png" alt="" class="c-tel__logo" />
+              <p class="c-tel__number--white">0123-456-7890</p>
+            </div>
+            <p class="l-footer__info__time">平日08:00〜20:00</p>
+        </div>
+      </div>
+    </div><!-- /.l-footer__inner -->
+      <div class="l-footer__copyright">
+        <small class="l-footer__copyright__txt">© 2020 Engress.</small>
+      </div>
+  </footer>
+  <!-- /.l-footer -->
     <script
     src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="

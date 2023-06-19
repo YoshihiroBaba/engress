@@ -1,0 +1,22 @@
+@use "../../foundation/foundation" as *;
+
+.u-dis {
+    &--none{
+        display: none;
+        &-min-ms{
+            @include responsive--min(ms){
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+    &--show {
+        display: block;
+        left: 50vw;
+        // transition: all .5s;
+        &--modal{
+            display: block;
+        }
+    }
+}

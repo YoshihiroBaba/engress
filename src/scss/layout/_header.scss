@@ -2,6 +2,14 @@
 
 .l-header {
     height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 110;
+    background-color: $cWhite;
+    @include responsive(ms){
+        height: 60px;
+    }
     &__inner {
         max-width: 1280px;
         height: 100%;
@@ -11,6 +19,25 @@
         display: flex;
         justify-content: space-between;
         // align-items: center;
+    }
+    &__burger{
+        left: 100vw;
+        height: 100vh;
+        width: 50vw;
+        background-color: $cWhite;
+        z-index: 11;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        transition: all .5s;
+        // display: none;
+        padding-top: 15vh;
+        opacity: .9;
+        border-left: 1px solid $cBdGray;
+        border-bottom: 1px solid $cBdGray;
+        @include responsive(sm){
+            font-size: .9em;
+        }
     }
     &__left {
         display: flex;
@@ -22,6 +49,9 @@
     }
     &__gnav{
         justify-content: left;
+        @include responsive(md){
+            display: none;
+        }
         :last-of-type{
             margin-right: 0;
         }
@@ -29,14 +59,51 @@
             margin-right: 28px;
             color: $cAppearance;
             font-weight: bold;
+            @include responsive(md){
+                display: block;
+                text-align: center;
+                padding-top: 3px;
+                margin-bottom: 25px;
+                margin-right: auto;
+                margin-left: auto;
+                width: 30%;
+                height: 1.5em;
+                &:hover{
+                    border-bottom: 2px solid $cAppearance;
+                    transition: all 1s;
+                    transform-origin: center;
+                    font-style: italic;
+                    width: 50%;
+                }
+            }
+            @include responsive(sm){
+                width: 55%;
+                font-size: .9em;
+                &:hover{
+                    width: 70%;
+                }
+            }
+        }
+        &--burger{
+            flex-direction: column;
         }
     }
     &__right {
         display: flex;
         align-items: center;
+        @include responsive(md){
+            display: none;
+        }
+        &--burger{
+            text-align: center;
+        }
     }
     &__info {
         text-align: right;
+        @include responsive(md){
+            text-align: center;
+            margin-top: 50px;
+        }
         &__time{
             font-size: 12px;
             font-weight: 500;
