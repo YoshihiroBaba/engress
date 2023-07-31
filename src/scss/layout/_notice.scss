@@ -1,0 +1,47 @@
+@use "../foundation/foundation" as *;
+
+.l-notice{
+    padding-top: 58px;
+    &__ttl{
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 60px;
+        @include responsive(sm){
+            font-size: 1.75em;
+        }
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+        >ul{
+            border-bottom: solid 1px $cBdGray;
+            margin-bottom: -37px;
+        }
+    }
+    &__item{
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+        border-top: solid 1px $cBdGray;
+        // align-items: end;
+        padding-top: 23.5px;
+        margin-bottom: 24.5px;
+        display: flex;
+
+        &__date{
+            display: block;
+            font-weight: 500;
+            min-width: 85px;
+        }
+        &__txt{
+            display: block;
+            font-weight: 500;
+            // width: 735px;
+            text-decoration: underline;
+            margin-left: 51px;
+        }
+    }
+}

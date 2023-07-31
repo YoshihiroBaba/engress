@@ -1,0 +1,144 @@
+@use "../foundation/foundation" as *;
+
+.l-notice-detail{
+    margin-top: 60px;
+    margin-bottom: -56px;
+    width: 100%;
+    @include responsive(ms){
+
+    }
+    &__inner{
+        max-width: 920px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0 auto;
+    }
+
+    &__ttl{
+        font-size: 1.75em;
+        font-weight: bold;
+        // margin-top: 1.428em;
+        margin-bottom: 36px;
+        line-height: 1.5em;
+        @include responsive(sm){
+            font-size: 1.5em;
+        }
+    }
+    &__time{
+            font-weight: 500;
+            text-align: right;
+            display: block;
+    }
+
+    &__sub-1{
+        margin-top: 60px;
+        margin-bottom: 33px;
+        >h2{
+            font-size: 1.625em;
+            font-weight: bold;
+            @include responsive(sm){
+                font-size: 1.425em;
+            }
+        }
+        >p{
+            font-weight: 500;
+            margin-top: 30px;
+            height: 60px;
+            line-height: 1.5em;
+            @include responsive(sm){
+                font-size: .9em;
+            }
+        }
+    }
+    &__sub-2{
+        >p{
+            font-weight: 500;
+            margin-top: 27px;
+            height: 60px;
+            line-height: 1.5em;
+            display: inline-block;
+            @include responsive(sm){
+                font-size: .9em;
+            }
+        }
+    }
+    &__box{
+        width: 100%;
+        min-height: 104px;
+        background-color: $cBgGray;
+        padding-top: 27px;
+        padding-left: 74px;
+        padding-right: 26px;
+        padding-bottom: 17px;
+        margin-top: 30px;
+        position: relative;
+        &__quotation{
+            font-size: 5.625em;
+            font-weight: 500;
+            color: $cFontGray;
+            width: 46px;
+            height: 45px;
+            margin-right: 11px;
+            padding-top: 0;
+            position: absolute;
+            left: 17px;
+            top: 16px;
+        }
+        &__txt{
+            font-weight: 500;
+            line-height: 1.5em;
+            @include responsive(sm){
+                font-size: .9em;
+            }
+        }
+    }
+    &__img{
+        width: 400px;
+        height: 250px;
+        margin-top: 30px;
+        margin-bottom: 40px;
+        img{
+            object-fit: cover;
+        }
+    }
+    &__list{
+        height: 120px;
+        max-width: 590px;
+        margin-top: -10px;
+        margin-left: 14px;
+        padding-left: 32px;
+        @include responsive(sm){
+            padding-right: 22px;
+        }
+        >p{
+            font-weight: 500;
+            line-height: 1.4em;
+            position: relative;
+            margin-bottom: 3px;
+            @include responsive(sm){
+                font-size: .9em;
+                line-height: 1.2em;
+            }
+            &::before{
+                content: "";
+                width: 11px;
+                height: 11px;
+                background: $cOrange;
+                border-radius: 50%;
+                position: absolute;
+                top: 5px;
+                left: -32px;
+                @include responsive(sm){
+                    left: -22px;
+                }
+            }
+        }
+     }
+     &__txtlink{
+        color: $cOrange;
+        text-decoration: underline;
+        font-weight: 500;
+        margin-top: 30px;
+        display: inline-block;
+    }
+}

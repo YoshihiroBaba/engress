@@ -1,0 +1,75 @@
+@use "../../foundation/foundation" as *;
+
+.p-sub-mv{
+
+    &__bg{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 221px;
+        margin-top: 80px;
+        position: relative;
+        @include responsive(ms){
+            margin-top: 60px;
+        }
+        &--detail{
+            height: 80px;
+            @include responsive(ms){
+                height: 60px;
+            }
+        }
+        &--price{
+            @extend .p-sub-mv__bg;
+            background-image: url(../images/plan.png);
+        }
+        &--blog{
+            @extend .p-sub-mv__bg;
+            background-image: url(../images/blog.png);
+        }
+        &--notice{
+            @extend .p-sub-mv__bg;
+            background-image: url(../images/news@2x.png);
+        }
+        &--contact{
+            @extend .p-sub-mv__bg;
+            background-image: url(../images/cta.png);
+        }
+    }
+    &__ttl{
+        color: $cWhite;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2em;
+        font-weight: bold;
+        @include responsive(ms){
+            font-size: 1.75em;
+        }
+    }
+    &__breadcrumbs{
+        height: 50px;
+        width: 100%;
+        background-color: $cBgGray;
+        @include responsive(ms){
+        height: auto;
+        }
+        &__txt{
+            color: $cAppearance;
+            font-weight: 500;
+            font-size: .75em;
+            padding-top: 19px;
+            @include responsive(ms){
+                padding-top: 13.5px;
+                padding-bottom: 13px;
+            }
+        }
+        &__inner{
+            max-width: 900px;
+            margin: 0 auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+}

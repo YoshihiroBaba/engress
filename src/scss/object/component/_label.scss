@@ -1,0 +1,57 @@
+@use "../../foundation/foundation" as *;
+
+.c-label{
+    color: $cWhite;
+    text-align: center;
+    display: block;
+    &--detail{
+        @extend .c-label;
+        background-color: $cAppearance;
+        // border: 1px solid $cGray;
+        height:31px;
+        width: 110px;
+        font-size: .75em;
+        font-weight: 500;
+        padding-top: 8.5px;
+    }
+    &--like{
+        @extend .c-label;
+        width: 69px;
+        border-radius: 3px;
+        background-color: $cNavy;
+        font-size: 10px;
+        margin-right: 4px;
+        padding-top: 5px;
+        padding-left: 15px;
+        position: relative;
+        > img{
+            width: 13.26px;
+            height: auto;
+            position: absolute;
+            left: 7px;
+            top: 4px;
+        }
+    }
+    &--share{
+        @extend .c-label--like;
+        width: 44px;
+        padding-left: 0;
+    }
+    &--tweet{
+        @extend .c-label--like;
+        background-color: $cLightblue;
+        >img{
+            top: 3px;
+        }
+    }
+    &--sidebar{
+        @extend .c-label;
+        width: 100%;
+        height: 63px;
+        background: $cAppearance;
+        border: 1px solid $cGray;
+        font-size: 1.3125em;
+        padding-top: 18px;
+        margin-bottom: 30px;
+    }
+}

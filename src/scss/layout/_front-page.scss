@@ -2,7 +2,7 @@
 @use "../object/object" as *;
 
 // mv
-.p-fv{
+.l-fv{
     background-image: url(../images/fv.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -159,7 +159,7 @@
 }
 
 // 3つの強み
-.p-features{
+.l-features{
     padding-top: 59px;
     &__ttl {
         font-size: 1.75em;
@@ -322,7 +322,7 @@
 }
 
 // 成功事例
-.p-success-case{
+.l-success-case{
     background-color: $cAppearance;
     min-height: 608px;
     padding-top: 58px;
@@ -433,7 +433,7 @@
 
 // ご利用の流れ
 
-.p-flow{
+.l-flow{
     padding-top: 58px;
     padding-bottom: 75px;
     &__ttl{
@@ -521,7 +521,7 @@
 
 // よくある質問
 
-.p-faq{
+.l-faq{
     padding-bottom: 90.24px;
     &__ttl{
         color: $cAppearance;
@@ -589,7 +589,7 @@
 
 // ブログ&お知らせ
 
-.p-blog-info{
+.l-blog-info{
     color: $cAppearance;
     &__inner{
         max-width: 920px;

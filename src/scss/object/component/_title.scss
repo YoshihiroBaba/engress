@@ -1,0 +1,26 @@
+@use "../../foundation/foundation" as *;
+
+.c-ttl{
+    &__v-border{
+        font-weight: bold;
+        font-size: 1.375em;
+        position: relative;
+        height: 28px;
+        padding-left: 14px;
+        padding-top: 2px;
+        @include responsive(sm){
+            font-size: 1.2em;
+            height: 26px;
+        }
+        &::before{
+            content: "";
+            height: 100%;
+            width: 4px;
+            background-color: $cAppearance;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+

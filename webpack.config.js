@@ -81,7 +81,36 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: "./src/templates/front-page.html",
-      // filename: "front-page.html",
+      filename: "index.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/price.html",
+      filename: "price.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/blog.html",
+      filename: "blog.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/blog-detail.html",
+      filename: "blog-detail.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/notice.html",
+      filename: "notice.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/notice-detail.html",
+      filename: "notice-detail.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/contact.html",
+      filename: "contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/templates/contact-completely.html",
+      filename: "contact-completely.html",
+    }),
+    new CleanWebpackPlugin(),
   ],
 };

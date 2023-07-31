@@ -13,8 +13,8 @@
         justify-content: space-between;
         display: flex;
         @include responsive(md){
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         @include responsive(ms){
             flex-direction: column;

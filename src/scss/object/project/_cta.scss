@@ -1,6 +1,6 @@
 @use "../../foundation/foundation" as *;
 
-.pr-cta{
+.p-cta{
     &__banner{
         background-image: url(../images/cta.png);
         background-position: center;
@@ -19,6 +19,7 @@
         color: $cBgGray;
         font-size: 2em;
         margin-bottom: 16px;
+        font-weight: bold;
         @include responsive(ms){
             font-size: 1.75em;
         }

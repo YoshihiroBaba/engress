@@ -1,0 +1,43 @@
+@use "../../foundation/foundation" as *;
+
+.p-pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 109px;
+    margin-bottom: -74px;
+    :last-child{
+        margin-right: 0;
+    }
+    @include responsive(ms){
+        margin-bottom: -50px;
+    }
+    &__box{
+        width: 50px;
+        height: 50px;
+        border: 1px solid $cAppearance;
+        text-align: center;
+        padding-top: 17px;
+        margin-right: 19px;
+        @include responsive(ms){
+            width: 40px;
+            height: 40px;
+            padding-top:10px;
+            margin-right: 15px;
+        }
+        &--reversal{
+            @extend .p-pagination__box;
+            background-color: $cAppearance;
+        }
+        &--border-none{
+            @extend .p-pagination__box;
+            border: none;
+        }
+    }
+    &__number{
+        font-weight: bold;
+        &--reversal{
+            font-weight: bold;
+            color: $cWhite;
+        }
+    }
+}
